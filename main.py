@@ -30,6 +30,25 @@ def create_and_commit(filename, message, days_ago=0):
   print(f"Created file 'green/{filename}' and committed with message: {message}")
 
 
+banner = """
+╔═╗┬┌┬┐┬ ┬┬ ┬┌┐                 
+║ ╦│ │ ├─┤│ │├┴┐                
+╚═╝┴ ┴ ┴ ┴└─┘└─┘                
+╔═╗┌─┐┌┐┌┌┬┐┬─┐┬┌┐ ┬ ┬┌┬┐┬┌─┐┌┐┌
+║  │ ││││ │ ├┬┘│├┴┐│ │ │ ││ ││││
+╚═╝└─┘┘└┘ ┴ ┴└─┴└─┘└─┘ ┴ ┴└─┘┘└┘
+┌─┐┬┬  ┬  ┌─┐┬─┐                
+├┤ ││  │  ├┤ ├┬┘                
+└  ┴┴─┘┴─┘└─┘┴└─                                                   
+                                                                                                              
+Developed By : Ahlyab
+URL : https://github.com/Ahlyab/github-contribution-chart-filler
+"""
+
+print(banner)
+
+
+
 # Example usage
 days = int(input("Days to streak you want : "))
 fn = input("Enter filename without extension : ")
