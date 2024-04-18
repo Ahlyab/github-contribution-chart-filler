@@ -26,3 +26,9 @@ A simple tool to fill the contribution chart of your github profile
 > execute script
 
 `python main.py`
+
+<hr>
+
+## Note
+
+You can either create a repo and then link it to `green` directory or you can create a repo of yours clone it and place the `main.py` there and execute it.
