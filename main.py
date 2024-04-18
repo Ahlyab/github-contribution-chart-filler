@@ -1,4 +1,5 @@
 import os
+import random
 
 
 def create_and_commit(filename, message, days_ago=0):
@@ -15,18 +16,23 @@ def create_and_commit(filename, message, days_ago=0):
         print("Error: Not a Git repository")
         return
 
-    # Create the file with some content
-    with open(filename, "w") as f:
-        f.write("This is a new file.\n")
+    number = random.randint(1, 20)
 
-    # Stage the file for commit
-    os.system(f"git add {filename}")
+    for i in range(0, number):
 
-    # Commit the changes with the message
-    if days_ago == 0:
-        os.system(f"git commit -m \"{message}\"")
-    else:
-        os.system(f"git commit -m \"{message}\" --date=\"{days_ago}days ago\"")
+        # Create the file with some content
+        with open(filename, "w") as f:
+            f.write("This is a new file.\n")
+
+        # Stage the file for commit
+        os.system(f"git add {filename}")
+
+        # Commit the changes with the message
+        if days_ago == 0:
+            os.system(f"git commit -m \"{message}\"")
+        else:
+            os.system(
+                f"git commit -m \"{message}\" --date=\"{days_ago}days ago\"")
 
     print(f"Created file '{filename}' and committed with message: {message}")
 
